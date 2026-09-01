@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">jmchtml Agent Skill</title>
+  <desc id="desc">Book-like enterprise HTML presentation system preview</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061923"/>
+      <stop offset="0.56" stop-color="#063a58"/>
+      <stop offset="1" stop-color="#057582"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2cb9ff"/>
+      <stop offset="0.55" stop-color="#0a79c3"/>
+      <stop offset="1" stop-color="#28d3c2"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#001019" flood-opacity=".36"/>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" rx="32" fill="url(#bg)"/>
+  <circle cx="1135" cy="98" r="180" fill="#17d6cb" opacity=".13" filter="url(#soft)"/>
+  <circle cx="120" cy="540" r="210" fill="#2196f3" opacity=".15" filter="url(#soft)"/>
+
+  <g font-family="Inter, Noto Sans SC, system-ui, sans-serif" fill="#fff">
+    <text x="72" y="92" font-size="18" font-weight="700" letter-spacing="4" opacity=".7">OPEN AGENT SKILL</text>
+    <text x="72" y="176" font-size="76" font-weight="760" letter-spacing="-3">jmchtml</text>
+    <text x="76" y="222" font-size="23" font-weight="500" opacity=".82">书页式企业 HTML 演示文稿设计系统</text>
+    <rect x="74" y="261" width="154" height="38" rx="19" fill="#fff" opacity=".1"/>
+    <text x="95" y="286" font-size="14" font-weight="650">SKILL.md 标准</text>
+    <rect x="240" y="261" width="150" height="38" rx="19" fill="#fff" opacity=".1"/>
+    <text x="264" y="286" font-size="14" font-weight="650">跨 Agent 安装</text>
+    <rect x="402" y="261" width="130" height="38" rx="19" fill="#fff" opacity=".1"/>
+    <text x="426" y="286" font-size="14" font-weight="650">零依赖运行</text>
+  </g>
+
+  <g transform="translate(628 74)" filter="url(#shadow)">
+    <rect x="0" y="0" width="570" height="428" rx="22" fill="#f7fafc"/>
+    <rect x="0" y="0" width="570" height="428" rx="22" fill="none" stroke="#fff" stroke-opacity=".55"/>
+    <rect x="28" y="24" width="286" height="30" rx="15" fill="#fff" stroke="#d6e7ef"/>
+    <text x="46" y="44" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="750" letter-spacing="1.4" fill="#658091">CONTENTS</text>
+    <rect x="122" y="30" width="56" height="18" rx="9" fill="#dff4fa"/>
+    <text x="137" y="43" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="700" fill="#036aa2">01 洞察</text>
+    <text x="194" y="43" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="650" fill="#8096a3">02 策略</text>
+    <text x="254" y="43" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="650" fill="#8096a3">03 路线</text>
+
+    <text x="34" y="104" font-family="Inter, Noto Sans SC, system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#0a79c3">EXECUTIVE REVIEW</text>
+    <text x="34" y="148" font-family="Inter, Noto Sans SC, system-ui, sans-serif" font-size="33" font-weight="760" fill="#101923">从信息到决策</text>
+    <text x="34" y="177" font-family="Inter, Noto Sans SC, system-ui, sans-serif" font-size="14" fill="#667986">统一结构、视觉与交互，让汇报更清晰。</text>
+
+    <g transform="translate(34 214)">
+      <rect width="150" height="120" rx="14" fill="#fff" stroke="#dfebf0"/>
+      <text x="18" y="31" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1" fill="#8295a0">STRUCTURE</text>
+      <text x="18" y="68" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="780" fill="#0a79c3">3 roles</text>
+      <text x="18" y="92" font-family="Inter, Noto Sans SC, system-ui, sans-serif" font-size="11" fill="#71838e">封面 · 内容 · 结束</text>
+    </g>
+    <g transform="translate(196 214)">
+      <rect width="150" height="120" rx="14" fill="#fff" stroke="#dfebf0"/>
+      <text x="18" y="31" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1" fill="#8295a0">NAVIGATION</text>
+      <text x="18" y="68" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="780" fill="#0a79c3">4 modes</text>
+      <text x="18" y="92" font-family="Inter, Noto Sans SC, system-ui, sans-serif" font-size="11" fill="#71838e">目录 · 圆点 · 进度 · 键盘</text>
+    </g>
+    <g transform="translate(358 214)">
+      <rect width="178" height="120" rx="14" fill="url(#accent)"/>
+      <text x="18" y="31" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="700" letter-spacing="1" fill="#fff" opacity=".76">DELIVERY</text>
+      <text x="18" y="68" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="780" fill="#fff">Offline</text>
+      <text x="18" y="92" font-family="Inter, Noto Sans SC, system-ui, sans-serif" font-size="11" fill="#fff" opacity=".84">单文件 HTML · 可打印</text>
+    </g>
+
+    <text x="34" y="385" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#80929d">01 / 08</text>
+    <rect x="219" y="378" width="132" height="8" rx="4" fill="#dce8ed"/>
+    <rect x="219" y="378" width="34" height="8" rx="4" fill="#9fb2bc"/>
+    <rect x="261" y="378" width="35" height="8" rx="4" fill="#036aa2"/>
+    <rect x="304" y="378" width="8" height="8" rx="4" fill="#9fb2bc"/>
+    <rect x="320" y="378" width="8" height="8" rx="4" fill="#9fb2bc"/>
+    <rect x="0" y="425" width="164" height="3" rx="1.5" fill="url(#accent)"/>
+  </g>
+
+  <g transform="translate(72 518)" font-family="Inter, system-ui, sans-serif">
+    <text x="0" y="0" fill="#fff" opacity=".62" font-size="12" letter-spacing="1.5">CODEX</text>
+    <text x="90" y="0" fill="#fff" opacity=".62" font-size="12" letter-spacing="1.5">CLAUDE</text>
+    <text x="190" y="0" fill="#fff" opacity=".62" font-size="12" letter-spacing="1.5">CURSOR</text>
+    <text x="288" y="0" fill="#fff" opacity=".62" font-size="12" letter-spacing="1.5">GEMINI</text>
+    <text x="392" y="0" fill="#fff" opacity=".62" font-size="12" letter-spacing="1.5">TRAE</text>
+    <text x="464" y="0" fill="#fff" opacity=".62" font-size="12" letter-spacing="1.5">QODER</text>
+    <text x="555" y="0" fill="#fff" opacity=".62" font-size="12" letter-spacing="1.5">WORKBUDDY</text>
+  </g>
+</svg>
+

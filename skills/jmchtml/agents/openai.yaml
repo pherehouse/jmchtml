@@ -1,0 +1,9 @@
+interface:
+  display_name: "JMC HTML Presentations"
+  short_description: "生成书页式企业 HTML 演示文稿与交互导航"
+  brand_color: "#036AA2"
+  default_prompt: "Use $jmchtml to turn my report into a polished, offline HTML presentation."
+
+policy:
+  allow_implicit_invocation: true
+

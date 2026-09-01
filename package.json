@@ -1,0 +1,46 @@
+{
+  "name": "jmchtml-skill",
+  "version": "1.0.0",
+  "description": "Cross-agent installer for the jmchtml presentation design skill",
+  "license": "MIT",
+  "private": false,
+  "type": "commonjs",
+  "bin": {
+    "jmchtml": "bin/jmchtml.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check bin/jmchtml.js && node --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "files": [
+    "skills/jmchtml",
+    "bin",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pherehouse/jmchtml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pherehouse/jmchtml/issues"
+  },
+  "homepage": "https://github.com/pherehouse/jmchtml#readme",
+  "keywords": [
+    "agent-skills",
+    "codex",
+    "claude-code",
+    "cursor",
+    "gemini-cli",
+    "trae",
+    "qoder",
+    "workbuddy",
+    "html-presentation"
+  ]
+}

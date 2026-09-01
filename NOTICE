@@ -1,0 +1,11 @@
+Trademark and asset notice
+==========================
+
+JMC, Ford, their names, logos, and related marks are the property of their
+respective owners. Their inclusion identifies the visual system from which this
+Skill was derived and does not imply endorsement of this open-source project.
+
+The MIT License applies to the code and documentation in this repository. The
+file skills/jmchtml/assets/jmc-ford-logo.png is not separately licensed under MIT and grants no
+trademark rights. Replace it with an asset you are authorized to use when the
+JMC/Ford brand is not appropriate for your project.
