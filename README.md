@@ -15,7 +15,7 @@
 
 - **不是一段临时提示词**：包含明确的页面结构、设计令牌、交互规则和交付检查清单。
 - **可离线交付**：品牌素材随仓库提供，不依赖个人图床或临时链接。
-- **跨 Agent**：遵循 `SKILL.md` 开放格式；借助 Skills CLI 可安装到 70+ Agent，并对 Codex、Claude Code、Cursor、Gemini CLI、GitHub Copilot、TRAE、TraeCode CLI、Qoder、QoderWork 与 WorkBuddy 给出明确入口。
+- **跨 Agent**：遵循 `SKILL.md` 开放格式；支持主流 Agent，也能通过提示词安装到其他 Agent。
 - **安装可回滚**：内置零依赖安装器；覆盖已有版本前自动创建备份。
 - **适合真实汇报**：兼顾浏览器播放、键盘翻页、全屏、打印和 Obsidian HTML Reader。
 
@@ -29,102 +29,15 @@
 npx skills add pherehouse/jmchtml
 ```
 
-指定 Agent 并安装到用户级目录：
+指定 Agent 并安装到用户级目录（把 `codex` 换成你的 Agent）：
 
 ```bash
-# Codex
 npx skills add pherehouse/jmchtml -s jmchtml -a codex -g -y
-
-# Claude Code
-npx skills add pherehouse/jmchtml -s jmchtml -a claude-code -g -y
-
-# Cursor
-npx skills add pherehouse/jmchtml -s jmchtml -a cursor -g -y
-
-# Gemini CLI
-npx skills add pherehouse/jmchtml -s jmchtml -a gemini-cli -g -y
-
-# GitHub Copilot
-npx skills add pherehouse/jmchtml -s jmchtml -a github-copilot -g -y
-
-# TRAE / TRAE 中国版
-npx skills add pherehouse/jmchtml -s jmchtml -a trae -g -y
-npx skills add pherehouse/jmchtml -s jmchtml -a trae-cn -g -y
-
-# Qoder / Qoder 中国版
-npx skills add pherehouse/jmchtml -s jmchtml -a qoder -g -y
-npx skills add pherehouse/jmchtml -s jmchtml -a qoder-cn -g -y
-```
-
-一次安装到多个 Agent：
-
-```bash
-npx skills add pherehouse/jmchtml -s jmchtml -g -y \
-  -a codex -a claude-code -a cursor -a gemini-cli -a trae -a qoder
-```
-
-去掉 `-g` 即安装到当前项目。也可以先试用，不写入 Skill 目录：
-
-```bash
-npx skills use pherehouse/jmchtml -s jmchtml -a codex
 ```
 
 标准目录 `skills/jmchtml/` 已用 Skills CLI 实测，可正确发现，并且安装结果只包含运行所需的 `SKILL.md`、`assets/` 与 `agents/`。
 
-### 方式二：GitHub CLI
-
-先预览，再安装：
-
-```bash
-gh skill preview pherehouse/jmchtml jmchtml
-gh skill install pherehouse/jmchtml jmchtml --agent codex --scope user
-```
-
-固定到特定发布版本：
-
-```bash
-gh skill install pherehouse/jmchtml jmchtml --agent codex --scope user --pin v1.0.0
-```
-
-`gh skill` 目前仍是 GitHub CLI 的预览功能。它支持 Codex、Claude Code、Cursor、Gemini CLI、Copilot、TRAE、Qoder 等大量 Agent，并会写入来源元数据，方便后续更新。
-
-### 方式三：产品原生安装与补充适配
-
-Gemini CLI 可以直接从 GitHub 安装：
-
-```bash
-gemini skills install https://github.com/pherehouse/jmchtml --path skills/jmchtml
-```
-
-WorkBuddy、QoderWork、TraeCode CLI 或需要明确目录控制时，使用仓库内置的零依赖安装器：
-
-```bash
-# WorkBuddy
-npx --yes github:pherehouse/jmchtml install --agent workbuddy --global
-
-# QoderWork
-npx --yes github:pherehouse/jmchtml install --agent qoderwork --global
-
-# TraeCode CLI
-npx --yes github:pherehouse/jmchtml install --agent trae-cli --global
-```
-
-安装器还支持这些目标：
-
-```text
-universal, codex, claude, cursor, gemini, copilot,
-trae, trae-cn, trae-cli, qoder, qoder-cn, qoderwork, workbuddy, all
-```
-
-安装到当前项目时将 `--global` 换成 `--project`。运行下面命令查看备份覆盖、预演和自定义根目录等选项：
-
-```bash
-npx --yes github:pherehouse/jmchtml --help
-```
-
-手动安装时，把 `skills/jmchtml/` 整个目录复制到对应的 Skill 目录。不要只复制 `SKILL.md`，否则默认 Logo 资产不可用。
-
-### 方式四：让 Agent 自己安装
+### 方式二：让 Agent 自己安装
 
 把下面这段提示词发给任意具备文件和终端权限的 Agent：
 
@@ -138,25 +51,9 @@ Skills 目录。若目标已存在，先创建带时间戳的备份，
 
 ## 兼容性
 
-| Agent | Skills CLI `-a` | 仓库安装器 `--agent` | 用户级目录 |
-|---|---|---|---|
-| OpenAI Codex | `codex` | `codex` | `~/.codex/skills/jmchtml` |
-| Claude Code | `claude-code` | `claude` | `~/.claude/skills/jmchtml` |
-| Cursor | `cursor` | `cursor` | `~/.cursor/skills/jmchtml` |
-| Gemini CLI | `gemini-cli` | `gemini` | `~/.gemini/skills/jmchtml` |
-| GitHub Copilot | `github-copilot` | `copilot` | `~/.copilot/skills/jmchtml` |
-| TRAE | `trae` | `trae` | `~/.trae/skills/jmchtml` |
-| TRAE 中国版 | `trae-cn` | `trae-cn` | `~/.trae-cn/skills/jmchtml` |
-| TraeCode CLI | — | `trae-cli` | `~/.traecli/skills/jmchtml` |
-| Qoder CLI | `qoder` | `qoder` | `~/.qoder/skills/jmchtml` |
-| Qoder 中国版 | `qoder-cn` | `qoder-cn` | `~/.qoder-cn/skills/jmchtml` |
-| QoderWork | — | `qoderwork` | `~/.qoderwork/skills/jmchtml` |
-| WorkBuddy | — | `workbuddy` | `~/.workbuddy/skills/jmchtml` |
-| 开放通用目录 | `universal` | `universal` | `~/.agents/skills/jmchtml` |
+方式一适用于 Skills CLI 支持的 Agent，包括 Codex、Claude Code、Cursor、Gemini CLI、GitHub Copilot、TRAE 和 Qoder。
 
-不同产品版本的 Skill 发现机制可能变化。安装后请新开会话，或使用产品提供的刷新/重载 Skills 功能。
-
-目录信息参考各产品官方文档：[Claude Code](https://code.claude.com/docs/en/skills)、[Cursor](https://cursor.com/docs/skills)、[Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/using-agent-skills.md)、[GitHub Copilot](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)、[TraeCode CLI](https://docs.trae.cn/cli_skills)、[Qoder CLI](https://docs.qoder.com/cli/Skills) 与 [QoderWork](https://docs.qoder.com/qoderwork/skills)。WorkBuddy 使用 `~/.workbuddy/skills/`，也可以在产品的 Skills 界面导入完整 Skill 文件夹。
+WorkBuddy、QoderWork、TraeCode CLI 或其他 Agent，直接使用方式二，让 Agent 把 `skills/jmchtml/` 整个目录安装到它的 Skills 目录即可。
 
 ## 更新
 
@@ -164,13 +61,6 @@ Skills 目录。若目标已存在，先创建带时间戳的备份，
 
 ```bash
 npx skills update jmchtml
-```
-
-通过 GitHub CLI 安装：
-
-```bash
-gh skill update jmchtml --dry-run
-gh skill update jmchtml
 ```
 
 ## 使用

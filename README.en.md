@@ -12,25 +12,14 @@ With the Agent Skills CLI:
 npx skills add pherehouse/jmchtml -s jmchtml -a codex -g -y
 ```
 
-Replace `codex` with `claude-code`, `cursor`, `gemini-cli`, `github-copilot`, `trae`, `trae-cn`, `qoder`, or any other target supported by the Skills CLI.
+Replace `codex` with any target supported by the Skills CLI.
 
-GitHub CLI can preview, install, pin, and update the Skill:
+For other agents, ask the agent to install the Skill from this repository:
 
-```bash
-gh skill preview pherehouse/jmchtml jmchtml
-gh skill install pherehouse/jmchtml jmchtml --agent codex --scope user
-```
-
-For WorkBuddy, QoderWork, and TraeCode CLI, use the repository's zero-dependency fallback installer. It also supports `qoder-cn`:
-
-```bash
-npx --yes github:pherehouse/jmchtml install --agent workbuddy --global
-```
-
-Gemini CLI also supports native repository installation:
-
-```bash
-gemini skills install https://github.com/pherehouse/jmchtml --path skills/jmchtml
+```text
+Install the jmchtml Skill from https://github.com/pherehouse/jmchtml.
+Copy the entire skills/jmchtml/ directory to your user-level Skills directory.
+Back up any existing copy before replacing it, then verify SKILL.md and report the path.
 ```
 
 ## Use
@@ -45,9 +34,9 @@ The Skill is written in Chinese because its primary use case is Chinese enterpri
 
 ## Supported agents
 
-OpenAI Codex, Claude Code, Cursor, Gemini CLI, GitHub Copilot, TRAE, TraeCode CLI, Qoder CLI, QoderWork, WorkBuddy, and agents that discover the shared `.agents/skills` directory.
+OpenAI Codex, Claude Code, Cursor, Gemini CLI, GitHub Copilot, TRAE, Qoder, WorkBuddy, QoderWork, TraeCode CLI, and other agents that support the shared `SKILL.md` format.
 
-See the [Chinese README](README.md) for the full compatibility matrix, installation prompt, safety notes, and project details.
+See the [Chinese README](README.md) for the installation prompt, safety notes, and project details.
 
 ## License and trademarks
 
