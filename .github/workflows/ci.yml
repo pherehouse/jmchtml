@@ -27,7 +27,7 @@ jobs:
           node - <<'NODE'
           const fs = require('node:fs');
           const text = fs.readFileSync('skills/jmchtml/SKILL.md', 'utf8');
-          if (!/^---\n[\s\S]*?\n---\n/.test(text)) throw new Error('Invalid YAML frontmatter block');
+          if (!/^---\r?\n[\s\S]*?\r?\n---\r?\n/.test(text)) throw new Error('Invalid YAML frontmatter block');
           if (!/^name:\s*["']?jmchtml["']?\s*$/m.test(text)) throw new Error('Missing name: jmchtml');
           if (!/^description:\s*.+$/m.test(text)) throw new Error('Missing description');
           NODE
